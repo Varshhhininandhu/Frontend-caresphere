@@ -48,7 +48,7 @@ const Login = () => {
   const handleSignInSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/login/check', {
+      const response = await fetch('https://backend-h6su.onrender.com/login/check', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(signInData),
@@ -86,7 +86,7 @@ const Login = () => {
   const handleSignUpSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/login', {
+      const response = await fetch('https://backend-h6su.onrender.com/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...signUpData, role: 'user' }),
