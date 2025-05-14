@@ -17,7 +17,7 @@ const Report = () => {
       const username = localStorage.getItem('username');
       if (username) {
         try {
-          const response = await axios.get(`http://localhost:8080/doctor/reports/${username}`);
+          const response = await axios.get(`https://backend-h6su.onrender.com/doctor/reports/${username}`);
           setReports(response.data);
         } catch (err) {
           setError('Failed to fetch reports.');
@@ -37,7 +37,7 @@ const Report = () => {
 
   const handleDeleteReport = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/doctor/${id}`);
+      await axios.delete(`https://backend-h6su.onrender.com/doctor/${id}`);
       setReports(prevReports => prevReports.filter(report => report.id !== id));
       setSelectedReport(null);
     } catch (err) {
