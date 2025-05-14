@@ -15,19 +15,19 @@ const HomePage = () => {
 
   useEffect(() => {
     // Fetch doctor count
-    fetch('http://localhost:8080/doctors/count')
+    fetch('https://backend-h6su.onrender.com/doctors/count')
       .then((response) => response.json())
       .then((data) => setDoctorCount(data))
       .catch((error) => console.error('Error fetching doctor count:', error));
 
     // Fetch appointment count
-    fetch('http://localhost:8080/appointments/count')
+    fetch('https://backend-h6su.onrender.com/appointments/count')
       .then((response) => response.json())
       .then((data) => setAppointmentCount(data))
       .catch((error) => console.error('Error fetching appointment count:', error));
 
     // Fetch user count
-    fetch('http://localhost:8080/login/count')
+    fetch('https://backend-h6su.onrender.com/login/count')
       .then((response) => response.json())
       .then((data) => setUserCount(data))
       .catch((error) => console.error('Error fetching user count:', error));
