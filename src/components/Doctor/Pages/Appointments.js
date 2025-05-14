@@ -14,7 +14,7 @@ const Appointments = () => {
     const username = localStorage.getItem('username');
 
     if (username) {
-      axios.get(`http://localhost:8080/appointments/doctor?doctorusername=${username}&status=pending`)
+      axios.get(`https://backend-h6su.onrender.com/appointments/doctor?doctorusername=${username}&status=pending`)
         .then(response => {
           setAppointments(response.data);
         })
@@ -28,7 +28,7 @@ const Appointments = () => {
   }, []);
 
   const handleAccept = (id) => {
-    axios.patch(`http://localhost:8080/appointments/${id}/completed`)
+    axios.patch(`https://backend-h6su.onrender.com/appointments/${id}/completed`)
       .then(() => {
         setAppointments(prevAppointments =>
           prevAppointments.map(appointment =>
@@ -43,7 +43,7 @@ const Appointments = () => {
   };
 
   const handleMarkCompleted = (id) => {
-    axios.patch(`http://localhost:8080/appointments/${id}/completed`)
+    axios.patch(`https://backend-h6su.onrender.com/appointments/${id}/completed`)
       .then(() => {
         setAppointments(prevAppointments =>
           prevAppointments.map(appointment =>
@@ -69,7 +69,7 @@ const Appointments = () => {
       cancelButtonText: 'Cancel',
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:8080/appointments/${id}`)
+        axios.delete(`https://backend-h6su.onrender.com/appointments/${id}`)
           .then(() => {
             setAppointments(prevAppointments =>
               prevAppointments.filter(appointment => appointment.id !== id)
