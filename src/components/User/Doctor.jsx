@@ -23,7 +23,7 @@ const Doctor = () => {
     const fetchDoctors = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:8080/doctors/all");
+        const response = await axios.get("https://backend-h6su.onrender.com/doctors/all");
         setDoctors(response.data);
       } catch (error) {
         setError("Failed to fetch doctors.");
@@ -64,7 +64,7 @@ const Doctor = () => {
         doctorImageUrl: selectedDoctor.imageUrl,
       };
 
-      const appointmentResponse = await axios.post("http://localhost:8080/appointments/create", appointmentDetails);
+      const appointmentResponse = await axios.post("https://backend-h6su.onrender.com/appointments/create", appointmentDetails);
       const appointmentId = appointmentResponse.data.id;
 
       const patientDetails = {
@@ -79,7 +79,7 @@ const Doctor = () => {
         appointmentid: appointmentId,
       };
 
-      await axios.post("http://localhost:8080/doctor/create", patientDetails);
+      await axios.post("https://backend-h6su.onrender.com/doctor/create", patientDetails);
 
       navigate("/thankyou", {
         state: {
