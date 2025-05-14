@@ -13,7 +13,7 @@ const DoctorsPage = () => {
   // Function to fetch doctor data
   const fetchDoctors = async () => {
     try {
-      const response = await fetch('http://localhost:8080/doctors/all');
+      const response = await fetch('https://backend-h6su.onrender.com/doctors/all');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -49,7 +49,7 @@ const DoctorsPage = () => {
   // Handle doctor removal
   const handleRemoveDoctor = async (doctorId, index) => {
     try {
-      const response = await fetch(`http://localhost:8080/doctors/${doctorId}`, {
+      const response = await fetch(`https://backend-h6su.onrender.com/doctors/${doctorId}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
