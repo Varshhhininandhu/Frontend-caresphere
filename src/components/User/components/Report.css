@@ -1,0 +1,76 @@
+.report-container {
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+  }
+  
+  .report-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .report-header h1 {
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .error-text {
+    color: #e74c3c;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .report-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .report-card {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .report-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .report-card.selected {
+    background-color: #e0f7fa;
+  }
+  
+  .report-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .report-details h2 {
+    font-size: 22px;
+    color: #333;
+  }
+  
+  .delete-button {
+    background-color: #ff6f61;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: #e55b50;
+  }
+  

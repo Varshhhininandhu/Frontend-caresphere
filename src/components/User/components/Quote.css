@@ -1,0 +1,58 @@
+.quote-section {
+  display: flex;
+  align-items: center;
+  justify-content:left; /* Center content horizontally */
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px;
+  color: rgb(6, 2, 2); /* Changed to white for better contrast */
+  height: 600px;
+  position: relative;
+  margin-top: 90px;
+}
+
+.quote-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left:100;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+  z-index: 1;
+}
+
+.quote-content {
+  z-index: 2; /* Ensure content is above the overlay */
+  max-width: 60%; /* Adjust to fit content better */
+  text-align: center; /* Center-align text */
+}
+
+.quote-content h1 {
+  font-size: 3em; /* Larger font size for emphasis */
+  margin-bottom: 20px;
+  font-weight: 700; /* Bolder text */
+  line-height: 1.2; /* Increase line height for readability */
+}
+
+.quote-content p {
+  font-size: 1.5em; /* Larger font size */
+  margin-bottom: 30px;
+  line-height: 1.5; 
+/* Increase line height */
+}
+
+.appointment-button {
+  background-color: #003135;
+  color: white;
+  padding: 15px 30px; /* Larger padding for bigger button */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1.2em; /* Larger font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.appointment-button:hover {
+  background-color: #024924; /* Darker shade on hover */
+}

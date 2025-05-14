@@ -1,0 +1,191 @@
+/* AdminLogin.css */
+.admin-lbody {
+  margin: 0;
+  color: #aaa;
+  font: 600 16px/18px 'Open Sans', sans-serif;
+  margin-top: 200px;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.clearfix:after, .clearfix:before {
+  content: '';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.admin-login-wrap {
+  width: 100%;
+  margin-left: 600px;
+  margin-top: 200px;
+  max-width: 525px;
+  height: 455px;
+  position: relative;
+  background: url('https://images.pexels.com/photos/249348/pexels-photo-249348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center;
+  box-shadow: 0 12px 15px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.admin-login-html {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 90px 70px 50px 70px;
+  background: rgba(7, 7, 7, 0.9);
+  overflow: hidden; /* Hide anything that goes beyond the boundaries */
+  perspective: 1000px; /* 3D perspective */
+}
+
+.admin-login-form {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-in-out; /* Reduced duration for quicker flip effect */
+}
+
+.admin-login-html .admin-sign-in-htm,
+.admin-login-html .admin-sign-up-htm {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side of the element */
+  transform-style: preserve-3d;
+}
+
+.admin-login-html .admin-sign-in-htm {
+  transform: rotateY(0deg); /* Front side */
+}
+
+.admin-login-html .admin-sign-up-htm {
+  transform: rotateY(180deg); /* Back side */
+}
+
+.admin-login-html .admin-sign-in,
+.admin-login-html .admin-sign-up,
+.admin-login-form .admin-group .admin-check {
+  display: none;
+}
+
+.admin-login-html .admin-tab,
+.admin-login-form .admin-group .admin-label,
+.admin-login-form .admin-group .admin-button {
+  text-transform: uppercase;
+}
+
+.admin-login-html .admin-tab {
+  font-size: 22px;
+  margin-right: 15px;
+  padding-bottom: 5px;
+  margin: 0 15px 10px 0;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+}
+
+.admin-login-html .admin-sign-in:checked + .admin-tab,
+.admin-login-html .admin-sign-up:checked + .admin-tab {
+  color: #fff;
+  border-color: #ee1111;
+}
+
+.admin-login-form .admin-group {
+  margin-bottom: 15px;
+}
+
+.admin-login-form .admin-group .admin-label,
+.admin-login-form .admin-group .admin-input,
+.admin-login-form .admin-group .admin-button {
+  width: 100%;
+  color: #fff;
+  display: block;
+}
+
+.admin-login-form .admin-group .admin-input,
+.admin-login-form .admin-group .admin-button {
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  background: rgba(255,255,255,.1);
+}
+
+.admin-login-form .admin-group input[data-type="password"] {
+  -webkit-text-security: circle;
+}
+
+.admin-login-form .admin-group .admin-label {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.admin-login-form .admin-group .admin-button {
+  background: #ee1111;
+}
+
+.admin-login-form .admin-group label .admin-icon {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  background: rgba(255,255,255,.1);
+}
+
+.admin-login-form .admin-group label .admin-icon:before,
+.admin-login-form .admin-group label .admin-icon:after {
+  content: '';
+  width: 10px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  transition: all .2s ease-in-out 0s;
+}
+
+.admin-login-form .admin-group label .admin-icon:before {
+  left: 3px;
+  width: 5px;
+  bottom: 6px;
+  transform: scale(0) rotate(0);
+}
+
+.admin-login-form .admin-group label .admin-icon:after {
+  top: 6px;
+  right: 0;
+  transform: scale(0) rotate(0);
+}
+
+.admin-login-form .admin-group .admin-check:checked + label {
+  color: #fff;
+}
+
+.admin-login-form .admin-group .admin-check:checked + label .admin-icon {
+  background: #1161ee;
+}
+
+.admin-login-form .admin-group .admin-check:checked + label .admin-icon:before {
+  transform: scale(1) rotate(45deg);
+}
+
+.admin-login-form .admin-group .admin-check:checked + label .admin-icon:after {
+  transform: scale(1) rotate(-45deg);
+}
+
+.admin-hr {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.637);
+}
+
+.admin-foot-lnk {
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}

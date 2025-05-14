@@ -1,0 +1,142 @@
+/* General Styles for the whole page */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fcfcfc;
+}
+.about-page {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  margin-top: 90px; /* Adjusts for fixed navbar height */
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-content {
+  max-width: 800px;
+  padding: 20px;
+  text-align: center; /* Center-align text */
+}
+
+.about-header {
+  margin-bottom: 40px;
+}
+
+.about-logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.about-section {
+  margin-bottom: 40px;
+}
+
+.about-description {
+  margin-bottom: 40px;
+}
+
+.about-features {
+  margin-bottom: 40px;
+}
+
+.about-features h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+.mission-vision {
+  margin-bottom: 40px;
+}
+
+.mission, .vision {
+  margin-bottom: 20px;
+}
+
+.mission h2, .vision h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.founders {
+  margin-bottom: 40px;
+}
+
+.founders h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.founder-photos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.founder-photo-item {
+  text-align: center;
+  max-width: 150px;
+}
+
+.founder-photo {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.contact-us {
+  margin-bottom: 40px;
+}
+
+.contact-us h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    padding: 20px;
+  }
+}

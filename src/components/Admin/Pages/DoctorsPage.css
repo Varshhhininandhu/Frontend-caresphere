@@ -1,0 +1,155 @@
+/* Container for the entire admin dashboard */
+.admin-dashboard {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif; /* Updated font for modern look */
+    background-color: #f4f6f9; /* Slightly darker background for better contrast */
+}
+
+/* Main content area */
+.main-content {
+    flex: 1;
+    padding: 10px; /* Increased padding for better spacing */
+    background-color: #ffffff; /* White background for content area */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+    overflow-y: auto; /* Allow scrolling if content exceeds viewport height */
+}
+
+/* Header styles */
+.header {
+    background-color: #003300; /* Updated to a vibrant blue */
+    padding: 20px; /* Increased padding */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Increased margin */
+    color: #fff;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 26px; /* Larger font size */
+    text-align: center; /* Centered text */
+}
+
+/* Content area styles */
+.content {
+    padding: 20px; /* Increased padding */
+}
+
+/* Search area styles */
+.searchArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.searchArea input {
+    width: 300px; /* Increased width */
+    padding: 12px; /* Increased padding */
+    font-size: 16px; /* Increased font size */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+/* Doctor list styles */
+.doctorList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased min width */
+    gap: 20px; /* Increased gap */
+    margin: 0 auto; /* Centered grid */
+    padding: 0; /* Removed padding */
+}
+
+/* Doctor card styles */
+.doctor-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 50px; /* Increased padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+    height: auto; /* Allow height to adjust based on content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Centered doctor image */
+.doctor-image {
+    margin-bottom: 15px; /* Reduced margin */
+    text-align: center; /* Centered image */
+    margin-left: -25px;
+}
+
+.doctor-image img {
+    width: 100px; /* Increased width */
+    height: 100px; /* Increased height */
+    border-radius: 50%; /* Circular images */
+    object-fit: cover;
+    border: 2px solid #003300; /* Added border for emphasis */
+}
+
+/* Doctor information styles */
+.doctor-info {
+    text-align: center;
+    margin-top: 30px; /* Centered text */
+}
+
+.doctor-info h3 {
+    margin: 15px 0; /* Adjusted margin */
+    font-size: 20px; /* Larger font size */
+    color: #003300; /* Updated color */
+}
+
+.doctor-info p {
+    margin: 6px 0; /* Adjusted margin */
+    color: #555;
+}
+
+.doctor-info a {
+    color: #003300;
+    text-decoration: none;
+}
+
+/* Button group styles */
+.button-group {
+    text-align: center;
+    margin-top: 15px; /* Increased margin */
+}
+
+.remove-button {
+    padding: 10px 15px; /* Increased padding */
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Added transition */
+}
+
+.remove-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0; /* Remove margin for small screens */
+    }
+
+    .header h1 {
+        font-size: 22px; /* Adjusted font size */
+    }
+
+    .searchArea input {
+        width: 90%; /* Full width for small screens */
+    }
+
+    .doctor-image img {
+        width: 80px; /* Adjusted width for smaller screens */
+        height: 80px; /* Adjusted height for smaller screens */
+    }
+}

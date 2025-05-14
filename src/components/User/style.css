@@ -1,0 +1,170 @@
+/* Doctor Container */
+.doctor-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+/* Media Query for larger screens */
+@media screen and (min-width: 1000px) {
+  .doctor-container {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+  }
+}
+
+/* Card Styling */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 250px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1em;
+  color: #555;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Modal Container Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Content Styling */
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Modal Fade-in Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Heading Styling */
+.modal-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Label Styling */
+.modal-content label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Date and Time Input Styling */
+.modal-content input[type="date"],
+.modal-content input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Focus Effect */
+.modal-content input[type="date"]:focus,
+.modal-content input[type="time"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Button Styling */
+.modal-content button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Confirm Button Styling (Book Appointment) */
+.modal-content button:first-of-type {
+  background-color: #7bed9f; /* Light green color */
+  color: white;
+  margin-right: 10px;
+}
+
+/* Confirm Button Hover Effect */
+.modal-content button:first-of-type:hover {
+  background-color: #2ed573; /* Slightly darker green for hover */
+  transform: translateY(-2px);
+}
+
+/* Cancel Button Styling */
+.modal-content button:last-of-type {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Cancel Button Hover Effect */
+.modal-content button:last-of-type:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}

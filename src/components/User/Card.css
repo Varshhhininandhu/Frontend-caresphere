@@ -1,0 +1,41 @@
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center; /* Center content horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically */
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  margin-bottom: 15px; /* Space between image and content */
+}
+
+.card-image {
+  max-width: 80%; /* Limit image size */
+  height: auto;
+  border-radius: 50%; /* Optional: makes the image circular */
+}
+
+.card-content {
+  padding: 0 20px; /* Add padding to content area */
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+}
+
+.card-content p {
+  margin: 0;
+}

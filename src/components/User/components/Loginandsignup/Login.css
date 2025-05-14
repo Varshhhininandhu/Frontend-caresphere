@@ -1,0 +1,187 @@
+/* Login.css */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f2f2f2 0%, #e0e0e0 100%);
+  margin: 0;
+}
+
+.login-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.login-tab-button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.login-tab-button:hover {
+  color: #007bff;
+}
+
+.login-active {
+  border-bottom: 3px solid #007bff;
+  color: #007bff;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-group {
+  margin-bottom: 20px;
+}
+
+.login-label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.login-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.login-password-toggle {
+  background: none;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  color: #007bff;
+  margin-top: 5px;
+}
+
+.login-check {
+  margin-right: 10px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.login-button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.login-hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.login-foot-lnk {
+  text-align: center;
+}
+
+.login-foot-lnk a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.login-foot-lnk a:hover {
+  color: #0056b3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Additional Animations */
+.login-input {
+  position: relative;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.login-button {
+  animation: bounceIn 1s;
+}
+
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.login-password-toggle {
+  display: block;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.sign-in-form,
+.sign-up-form {
+  animation: fadeSlideIn 0.5s ease-in-out;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

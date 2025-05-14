@@ -1,0 +1,103 @@
+/* UserDetails.css */
+
+.user-details-container {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .user-details-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+  }
+  
+  .user-details-header {
+    background: #024950;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #024950;
+  }
+  
+  .user-details-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  .user-details-body {
+    padding: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #495057;
+    font-size: 16px;
+  }
+  
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #495057;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    border-color: #024950;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+  }
+  
+  .form-textarea {
+    resize: vertical;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-button {
+    background-color: #024950;
+    color: #ffffff;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .form-button:hover {
+    background-color: #024950;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-button:active {
+    background-color: #024950;
+  }
+  

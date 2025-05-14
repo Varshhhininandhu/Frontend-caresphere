@@ -1,0 +1,228 @@
+/* General Styles */
+.thank-you-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f8ff;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.thank-you-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 700px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animation for Fade In */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Title Styling */
+.thank-you-header h1 {
+  font-size: 3.5em;
+  color: #4caf50;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center; /* Center aligns the icon and text */
+  justify-content: center;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.thank-you-icon {
+  color: #14d221; /* Add a pop of color */
+  font-size: 1.5em; /* Slightly larger than regular text */
+}
+
+.thank-you-header p {
+  font-size: 1.4em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Appointment Details */
+.appointment-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.appointment-info {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.appointment-image img {
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #050505;
+}
+
+.appointment-info p {
+  margin: 5px 0;
+}
+
+.icon {
+  color: #4caf50;
+  margin-right: 8px;
+  font-size: 1.2em;
+}
+
+/* Additional Information Section */
+.additional-info {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.additional-info h3 {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.additional-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.additional-info li {
+  background: #e0f7fa;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  font-size: 1em;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.additional-info li .icon {
+  color: #00796b;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+/* Tips Section */
+.tips {
+  margin-top: 20px;
+  text-align: left;
+  background-color: #f1f8e9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.tips h3 {
+  font-size: 1.6em;
+  color: #388e3c;
+  margin-bottom: 10px;
+}
+
+.tips p {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Feedback Section */
+.feedback-section {
+  margin-top: 30px;
+}
+
+.feedback-section h3 {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feedback-section p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Attractive Button Styles */
+.feedback-btn,
+.back-home-btn {
+  background: linear-gradient(90deg, #3498db, #2980b9); /* Attractive gradient */
+  color: #fff;
+  border: none;
+  border-radius: 8px; /* Slightly more rounded corners */
+  padding: 14px 28px; /* Increased padding for a bigger button */
+  font-size: 18px; /* Larger font size */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.feedback-btn:hover,
+.back-home-btn:hover {
+  background: linear-gradient(90deg, #2980b9, #3498db); /* Hover effect */
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.feedback-btn:focus,
+.back-home-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5); /* Focus outline for accessibility */
+}
+
+.feedback-btn span,
+.back-home-btn span {
+  margin-left: 8px; /* Space between text and icon */
+}
+
+.feedback-link {
+  display: inline-block;
+  background-color: #2196f3;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-link:hover {
+  background-color: #1976d2;
+}
+
+.back-to-home {
+  padding: 20px;
+}
+
+.back-to-home .back-home-btn {
+  background-color: #14d221;
+}
+
+.feedback-section .feedback-btn {
+  background-color: #14d221;
+}
