@@ -18,25 +18,25 @@ const HomePage = () => {
 
   useEffect(() => {
     // Fetch the total number of patients for the doctor
-    fetch(`http://localhost:8080/doctor/patients/count?doctor=${doctorUsername}`)
+    fetch(`https://backend-h6su.onrender.com/doctor/patients/count?doctor=${doctorUsername}`)
       .then((response) => response.json())
       .then((data) => setTotalPatients(data))
       .catch((error) => console.error('Error fetching total patients:', error));
 
     // Fetch the count of ongoing patients
-    fetch(`http://localhost:8080/doctor/ongoing?doctor=${doctorUsername}`)
+    fetch(`https://backend-h6su.onrender.com/doctor/ongoing?doctor=${doctorUsername}`)
       .then((response) => response.json())
       .then((data) => setUnattendedPatients(data.length))
       .catch((error) => console.error('Error fetching ongoing patients:', error));
 
     // Fetch the count of completed patients
-    fetch(`http://localhost:8080/doctor/completed?doctor=${doctorUsername}`)
+    fetch(`https://backend-h6su.onrender.com/doctor/completed?doctor=${doctorUsername}`)
       .then((response) => response.json())
       .then((data) => setAttendedPatients(data.length))
       .catch((error) => console.error('Error fetching completed patients:', error));
 
     // Fetch the total number of appointments for the doctor
-    fetch(`http://localhost:8080/appointments/countByDoctor?doctorusername=${doctorUsername}`)
+    fetch(`https://backend-h6su.onrender.com/appointments/countByDoctor?doctorusername=${doctorUsername}`)
       .then((response) => response.json())
       .then((data) => setAppointmentsCount(data))
       .catch((error) => console.error('Error fetching appointments count:', error));
