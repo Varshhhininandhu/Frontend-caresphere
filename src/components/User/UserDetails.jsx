@@ -50,7 +50,7 @@ const UserDetails = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/userdetails', formData);
+      const response = await axios.post('https://backend-h6su.onrender.com/userdetails', formData);
       console.log('User Details Saved:', response.data);
       navigate('/');
     } catch (error) {
