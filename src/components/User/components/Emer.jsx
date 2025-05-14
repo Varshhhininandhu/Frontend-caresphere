@@ -19,7 +19,7 @@ const EmergencyPage = () => {
 
   const fetchUserDetails = async (username) => {
     try {
-      const response = await fetch(`http://localhost:8080/userdetails/user?username=${username}`);
+      const response = await fetch(`https://backend-h6su.onrender.com/userdetails/user?username=${username}`);
       if (!response.ok) throw new Error('Network response was not ok');
       const data = await response.json();
       if (data.length > 0) setUserDetails(data[0]);
