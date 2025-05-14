@@ -16,7 +16,7 @@ const MyAccount = () => {
     const username = localStorage.getItem('username'); 
     
     if (username) {
-      axios.get(`http://localhost:8080/userdetails/user?username=${username}`)
+      axios.get(`https://backend-h6su.onrender.com/userdetails/user?username=${username}`)
         .then(response => {
           setUserDetails(response.data[0]); 
           setFormData(response.data[0]);
@@ -36,7 +36,7 @@ const MyAccount = () => {
   };
 
   const handleSave = () => {
-    axios.put('http://localhost:8080/userdetails/update', formData)
+    axios.put('https://backend-h6su.onrender.com/userdetails/update', formData)
       .then(response => {
         setUserDetails(response.data);
         setEditMode(false);
