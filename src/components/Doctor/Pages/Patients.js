@@ -32,7 +32,7 @@ const Patients = () => {
       }
 
       try {
-        const response = await fetch(`http://localhost:8080/doctor/ongoing?doctor=${username}`);
+        const response = await fetch(`https://backend-h6su.onrender.com/doctor/ongoing?doctor=${username}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -70,7 +70,7 @@ const Patients = () => {
 
   const handleMarkCompleted = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8080/doctor/mark-completed/${id}`, {
+      const response = await fetch(`https://backend-h6su.onrender.com/doctor/mark-completed/${id}`, {
         method: 'PUT',
       });
       if (!response.ok) {
@@ -111,7 +111,7 @@ const Patients = () => {
     }
   
     try {
-      const response = await fetch(`http://localhost:8080/doctor/edit-patient/${editPatient.id}`, {
+      const response = await fetch(`https://backend-h6su.onrender.com/doctor/edit-patient/${editPatient.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -159,7 +159,7 @@ const Patients = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8080/doctor/add-report', {
+      const response = await fetch('https://backend-h6su.onrender.com/doctor/add-report', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
