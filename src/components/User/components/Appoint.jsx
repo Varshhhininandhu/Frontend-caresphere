@@ -19,7 +19,7 @@ const Appoint = () => {
       try {
         const username = localStorage.getItem('username');
         if (username) {
-          const response = await axios.get(`http://localhost:8080/appointments/user`, {
+          const response = await axios.get(`https://backend-h6su.onrender.com/appointments/user`, {
             params: {
               username: username,
               'statuses[]': ['pending', 'accepted'],
@@ -65,7 +65,7 @@ const Appoint = () => {
 
   const handleDelete = async (appointmentId) => {
     try {
-      await axios.delete(`http://localhost:8080/appointments/${appointmentId}`);
+      await axios.delete(`https://backend-h6su.onrender.com/appointments/${appointmentId}`);
       setAppointments(appointments.filter(appointment => appointment.id !== appointmentId));
     } catch (error) {
       console.error('Error deleting appointment:', error);
