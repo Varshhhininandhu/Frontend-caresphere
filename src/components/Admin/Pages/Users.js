@@ -8,7 +8,7 @@ const Users = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch('http://localhost:8080/login'); // Adjust the URL if needed
+      const response = await fetch('https://backend-h6su.onrender.com/login'); // Adjust the URL if needed
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
